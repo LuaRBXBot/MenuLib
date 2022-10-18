@@ -41,9 +41,9 @@ Section:NewButton("Button name", "Info", function()
 end)
 ```
 
-### CheckBox
+### Checkbox
 ```lua
-Section:NewToggle("Checkbox","info checkbox",function(checkbox)
+Section:NewCheckbox("Checkbox","info checkbox",function(checkbox)
   if checkbox then
   --// Enable
   else
@@ -114,7 +114,7 @@ theme = {
 local Window = Library:NewWindow("Your name script hub", theme)
 local Tab = Window:NewTab("Your Tab Name")
 local Section = Tab:NewSection("Section name")
-Section:NewToggle("ToggleName","info",function(state)
+Section:NewCheckbox("ToggleName","info",function(state)
   if state then
     --// Enable
     else
