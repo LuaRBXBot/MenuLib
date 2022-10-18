@@ -1,11 +1,11 @@
 # MenuLib
 BaseMenuForScripts (Not my)
 
-###Library
+### Library
 ```lua
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaRBXBot/MenuLib/main/Menu.lua", true))()
-
-###Menu styles
+```
+### Menu styles
 * RJTheme 1
 * RJTheme 2
 * RJTheme 3/4/5/6/7
@@ -18,68 +18,113 @@ colorss = {
     TextColor = Color3.fromRGB(255,255,255),
     ElementColor = Color3.fromRGB(20, 20, 20)
     }
-
-###Window
+```
+### Window
 ```lua
 local Window = Library.CreateLib("Window", colorss)
+```
 
-###Tab
+### Tab
 ```lua
 local Tab = Window:NewTab("TabName")
+```
 
-###Section
+### Section
 ```lua
 local Section = Tab:NewSection("Section name")
+```
 
-###Button
+### Button
 ```lua
 Section:NewButton("Button name", "Info", function()
-
+ --// body script
 end)
+```
 
-###CheckBox
+### CheckBox
 ```lua
 Section:NewToggle("Checkbox","info checkbox",function(checkbox)
   if checkbox then
-  print("Checkbox on")
+  --// Enable
   else
-  print("Checkbox off")
+  --// Disable
 end)
+```
 
-###Keybind
+### Keybind
 ```lua
 Section:NewKeybind("Keybind name","Info",Enum.KeyCode.F,functions()
 print("You pressed on key")
 end)
+```
 
-###Label
+### Label
 ```lua
 Section:NewLabel("Text label")
+```
 
-###Slider
+### Slider
 ```lua
 Section:NewSlider("Slider","Info",250,0,function(slider)
-game:GetService("Players").LocalPlayer.Humanoid.WalkSpeed = slider
+game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = slider
 end)
+```
 
-###Text box
+### Text box
 ```lua
 Section:NewTextBox("Text box","Info (x - number [ x,x,x ])",function(txt)
-    game:GetService("Players").LocalPlayer.Humanoid.JumpPower = txt
+    game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = txt
 end)
+```
 
-###DropDown
+### DropDown
 ```lua
 Section:NewDropdown("DropwDown name", "Info", {"Option 1", "Option 2", Option 3}, function(dropdown)
 if dropdown == "Option 1" then
---//function
+--// function
 elseif dropdown == "Option 2" then
---//function
+--// function
 elseif dropdown == "Option 3 then
---//function
+--// function
 end
 end)
+```
 
+### Copy paste
+```lua
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaRBXBot/MenuLib/main/Menu.lua", true))()
+theme = {
+    SchemeColor = Color3.fromRGB(255, 255, 255),
+    Background = Color3.fromRGB(124, 115, 115),
+    Header = Color3.fromRGB(124, 115, 115),
+    TextColor = Color3.fromRGB(255,255,255),
+    ElementColor = Color3.fromRGB(141, 141, 141)
+    }
+
+    
+local Window = Library:NewWindow("Your name script hub", theme)
+local Tab = Window:NewTab("Your Tab Name")
+local Section = Tab:NewSection("Section name")
+Section:NewToggle("ToggleName","info",function(state)
+  if state then
+    --// Enable
+    else
+    --// Disable
+    end
+end)
+Section:NewLabel("Slider:")
+Section:NewSlider("SliderName","Info",150,0,function(count) --// 150 max | 16 min
+    game:service("Players").LocalPlayer.Character.Humanoid.WalkSpeed = count
+end)
+
+--// And so on, the above listed buttons, sliders, selecting options(Dropdown), labels, tabs, sections.
+
+--// if you not know how add new tab just add
+local Tab = Window:NewTab("Your Tab Name2")
+local Section = Tab:NewSection("Section name2")
+
+--// And then write new functions in another tab
+```
 
 
 
