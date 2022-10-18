@@ -90,6 +90,15 @@ end
 end)
 ```
 
+### ColorPicker
+```lua
+Section:NewColorPicker("ColorPickerName","Info",Color3.fromRGB(191,245,67),function(color)
+
+game:service("Players").LocalPlayer.Character.Head.Color3 = color
+
+end)
+```
+
 ### Copy paste
 ```lua
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaRBXBot/MenuLib/main/Menu.lua", true))()
