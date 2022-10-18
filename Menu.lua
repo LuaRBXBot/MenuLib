@@ -1015,9 +1015,9 @@ function Kavo.CreateLib(kavName, themeList)
                 end)()
             end 
 
-                function Elements:NewToggle(tname, nTip, callback)
+                function Elements:NewCheckbox(tname, nTip, callback)
                     local TogFunction = {}
-                    tname = tname or "Toggle"
+                    tname = tname or "Checkbox"
                     nTip = nTip or "Prints Current Toggle State"
                     callback = callback or function() end
                     local toggled = false
