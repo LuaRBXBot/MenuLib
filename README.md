@@ -31,7 +31,7 @@ local Tab = Window:NewTab("TabName")
 
 ### Section
 ```lua
-local Section = Tab:NewSection("Section name")
+local Section = Tab:NewSection("Section name", --[[true/false]] )
 ```
 
 ### Button
