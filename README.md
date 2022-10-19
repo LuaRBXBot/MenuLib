@@ -72,7 +72,7 @@ end)
 
 ### Text box
 ```lua
-Section:NewTextBox("Text box","Info (x - number [ x,x,x ])",function(txt)
+Section:NewTextBox("Text box","Info",function(txt)
     game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = txt
 end)
 ```
