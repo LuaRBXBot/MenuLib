@@ -8,7 +8,12 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaRB
 ### Menu styles
 * RJTheme 1
 * RJTheme 2
-* RJTheme 3/4/5/6/7
+* RJTheme 3
+* RJTheme 4
+* RJTheme 5
+* RJTheme 6
+* RJTheme 7
+* RJTheme 8
 or create your own style
 ```lua
 colorss = {
@@ -21,7 +26,7 @@ colorss = {
 ```
 ### Window
 ```lua
-local Window = Library.CreateLib("Window", colorss)
+local Window = Library.CreateLib("Window", "RJTheme3") --// or ("Window", colorss)
 ```
 
 ### Tab
