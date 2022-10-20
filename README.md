@@ -43,7 +43,7 @@ end)
 
 ### Checkbox
 ```lua
-Section:NewCheckbox("Checkbox","info checkbox",function(checkbox)
+Section:NewCheckBox("Checkbox","info checkbox",function(checkbox)
   if checkbox then
   --// Enable
   else
@@ -79,23 +79,21 @@ end)
 
 ### DropDown
 ```lua
-Section:NewDropdown("DropwDown name", "Info", {"Option 1", "Option 2", Option 3}, function(dropdown)
-if dropdown == "Option 1" then
---// function
-elseif dropdown == "Option 2" then
---// function
-elseif dropdown == "Option 3 then
---// function
+Section:NewDropdown("DropDown (speed)", "Info", {"Standart", "Small", Big}, function(dropdown)
+if dropdown == "Standart" then
+game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = 16
+elseif dropdown == "Small" then
+game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = 8
+elseif dropdown == "Big" then
+game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = 100
 end
 end)
 ```
 
 ### ColorPicker
 ```lua
-Section:NewColorPicker("ColorPickerName","Info",Color3.fromRGB(191,245,67),function(color)
-
+Section:NewColorPicker("ColorPickerName", "Info", Color3.fromRGB(191,245,67), function(color)
 game:service("Players").LocalPlayer.Character.Head.Color3 = color
-
 end)
 ```
 
