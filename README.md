@@ -3,7 +3,7 @@ Base Menu For Scripts (Not my) small changed
 
 ### Library
 ```lua
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaRBXBot/MenuLib/main/Menu.lua", true))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/gmTechDEV/MenuLib/main/Menu.lua", true))()
 ```
 ### Menu styles
 * RJTheme 1
